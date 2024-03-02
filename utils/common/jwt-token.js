@@ -7,7 +7,7 @@ const generateToken =  async(payload)=>{
 }
 
 
-const verifyToken = async()=>{
+const verifyToken = async(token)=>{
     const decoded = await jwt.verify(token,configService.JWT_SECRET);
     return decoded
 }

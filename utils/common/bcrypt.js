@@ -3,6 +3,7 @@ const configService = require("./configService");
 
 
 const hashPassword = async(password)=>{
+    console.log(typeof configService.SALT_ROUNDS);
     const hash = await bcrypt.hash(password,configService.SALT_ROUNDS);
     return hash;
 }
